@@ -76,7 +76,8 @@ a:visited {
 .download {
     text-align: center;
 }
-.download-button {
+.download-button,
+.download-button:visited {
     display: inline-block;
     *display: inline;
     zoom: 1;
