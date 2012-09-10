@@ -25,6 +25,24 @@ a:visited {
     color: #565796;
 }
 
+[data-icon]:before {
+    font-family: 'Pictos Custom';
+    content: attr(data-icon);
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.l-wrap {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .home {
     max-width: 600px;
     margin: 16px auto;
@@ -55,13 +73,35 @@ a:visited {
     text-align: center;
 }
 
-.l-wrap {
-    max-width: 600px;
-    margin: auto;
-    padding: 0 16px;
+.download {
+    text-align: center;
+}
+.download-button {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+    font-size: 1.125em;
+    text-decoration: none;
+    background: #565796;
+    color: #F5F4EB;
+    padding: 2px 8px 0;
+    border: 1px solid #42454C;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 1px 1px 2px rgba(184, 194, 167, 0.9);
+    -moz-box-shadow: 1px 1px 2px rgba(184, 194, 167, 0.9);
+    box-shadow: 1px 1px 2px rgba(184, 194, 167, 0.9);
+}
+.download-button:before {
+    vertical-align: middle;
+    margin-right: 4px;
+    position: relative;
+    top: 0px;
 }
 
 @media screen and (min-width: 480px) {
@@ -72,15 +112,20 @@ a:visited {
     .price {
         font-size: 2.5em;
     }
+
+    .download-button {
+        font-size: 1.5em;
+        padding: 2px 12px 0;
+    }
+    .download-button:before {
+        margin-right: 8px;
+        top: 1px;
+    }
 }
 
 @media screen and (min-width: 600px) {
     h1 {
         font-size: 4em;
-    }
-
-    .price {
-        font-size: 3em;
     }
 
     .home {
@@ -90,5 +135,17 @@ a:visited {
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         border-radius: 4px;
+    }
+
+    .price {
+        font-size: 3em;
+    }
+
+    .download-button {
+        font-size: 1.75em;
+        padding: 2px 16px 0;
+    }
+    .download-button:before {
+        top: 2px;
     }
 }
